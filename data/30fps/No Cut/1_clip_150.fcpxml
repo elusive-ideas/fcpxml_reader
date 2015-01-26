@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.2">
+    <project name="Timewarp seq" uid="1264CDBE-919B-4BE7-8092-405F24C11558" eventID="A4885E4E-36CC-49B8-BBDC-F2FD4D6DB464" location="file://localhost/Volumes/volTemp/Final%20Cut%20Projects/Bits%20n%20Pieces/Timewarp%20seq/">
+        <resources>
+            <format id="r1" name="FFVideoFormat1080p30" frameDuration="100/3000s" width="1920" height="1080"/>
+            <projectRef id="r2" name="zzzzz" uid="A4885E4E-36CC-49B8-BBDC-F2FD4D6DB464"/>
+            <asset id="r3" name="1 clip - 100" uid="F5A38E5E6C8CF19D982FA2ABB42BD8DC" projectRef="r2" src="file://localhost/Volumes/volTemp/Temp%20Media/zzzz/Timewarp%20clips%20tc/30fps/1%20clip%20-%20100.mov" start="0s" duration="30100/3000s" hasVideo="1">
+                <bookmark>Ym9vazgEAAAAAAQQMAAAALvwbojFthEvfRd/CIs1HlPyPh2MklpuRDy6zsrPbBWoQAMAAAcAAAABAQAAVm9sdW1lcwAIAAAAAQEAAHZvbEFtYmVyCwAAAAEBAABBbWJlciBNZWRpYQAEAAAAAQEAAHp6enoRAAAAAQEAAFRpbWV3YXJwIGNsaXBzIHRjAAAABQAAAAEBAAAzMGZwcwAAABAAAAABAQAAMSBjbGlwIC0gMTAwLm1vdhwAAAABBgAABAAAABQAAAAkAAAAOAAAAEQAAABgAAAAcAAAAAgAAAAEAwAAwiYAAAAAAAAIAAAABAMAAAIAAAAAAAAACAAAAAQDAABlAAAAAAAAAAgAAAAEAwAAVgYAAAAAAAAIAAAABAMAAEtYAQAAAAAACAAAAAQDAABMWAEAAAAAAAgAAAAEAwAA31gBAAAAAAAcAAAAAQYAAKwAAAC8AAAAzAAAANwAAADsAAAA/AAAAAwBAAAIAAAAAAQAAEG6Z7idAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAAAQAAAAgAAAAEAwAAAGDGeboCAAAIAAAAAAQAAEG5p1Y9AAAAJAAAAAEBAAAxMkQwM0ZCNi1FQTU4LTNGQTAtODA5MC0yRjVFOThBM0E3REIYAAAAAQIAAAEBAAABAAgA7z8AAAEACAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvdm9sQW1iZXIAAAAMAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAEAwAAAICcregAAAAIAAAAAAQAAEG09HRvAAAAJAAAAAEBAAAwN0RCNDc0RC1FNjk2LTM2REEtQkYxMC02RUYwQzgxMzk1N0EYAAAAAQIAAIEAAAABAAgA7z8AAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAFQAAAD+////APAAAAAAAAAGAAAAAiAAAIwCAAAAAAAAECAAAAwCAAAAAAAAESAAAEACAAAAAAAAEiAAACACAAAAAAAAEyAAADACAAAAAAAAICAAAGwCAAAAAAAABAAAAAMDAAAA8AAABAAAAAMDAAAAAAAAIAAAAAEGAAD0AgAAAAMAAHgBAAAAAwAAAAMAAAADAAAAAwAAAAMAAAQAAAADAwAAAAgAKMAAAAD+////AQAAAJgCAAAPAAAABBAAAIgAAAAAAAAABRAAABwBAAAAAAAAEBAAAFABAAAAAAAAQBAAAEABAAAAAAAAVBAAAHgBAAAAAAAAVRAAAHgBAAAAAAAAVhAAAHABAAAAAAAAACAAAAwDAAAAAAAAAiAAAPABAAAAAAAAECAAABQAAAAAAAAAESAAAKQBAAAAAAAAEiAAAIQBAAAAAAAAEyAAAJQBAAAAAAAAICAAANABAAAAAAAAENAAADQDAAAAAAAA</bookmark>
+                <metadata>
+                    <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                        <array>
+                            <string>H.264</string>
+                        </array>
+                    </md>
+                    <md key="com.apple.proapps.mio.ingestDate" value="2015-01-15 08:58:40 +0000"/>
+                </metadata>
+            </asset>
+        </resources>
+        <sequence duration="20000/3000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+            <spine>
+                <clip offset="0s" name="1 clip - 100" duration="20000/3000s" tcFormat="NDF">
+                    <timeMap>
+                        <timept time="0s" value="0s" interp="smooth"/>
+                        <timept time="20013/3000s" value="10033333333/1000000000s" interp="smooth"/>
+                    </timeMap>
+                    <video offset="0s" ref="r3" duration="30100/3000s"/>
+                </clip>
+            </spine>
+        </sequence>
+    </project>
+</fcpxml>

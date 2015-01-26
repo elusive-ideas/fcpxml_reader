@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.2">
+    <project name="Timewarp seq" uid="1264CDBE-919B-4BE7-8092-405F24C11558" eventID="A4885E4E-36CC-49B8-BBDC-F2FD4D6DB464" location="file://localhost/Volumes/volTemp/Final%20Cut%20Projects/Bits%20n%20Pieces/Timewarp%20seq/">
+        <resources>
+            <format id="r1" name="FFVideoFormat1080p30" frameDuration="100/3000s" width="1920" height="1080"/>
+            <effect id="r2" name="Timecode" uid=".../Generators.localized/Elements.localized/Timecode.localized/Timecode.motn"/>
+        </resources>
+        <sequence duration="30100/3000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+            <spine>
+                <video offset="0s" ref="r2" name="Timecode" duration="30100/3000s" start="3600s"/>
+            </spine>
+        </sequence>
+    </project>
+</fcpxml>
