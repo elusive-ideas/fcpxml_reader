@@ -97,7 +97,7 @@ class clip_number_logic(unittest.TestCase):
 
         for current in data:
             wrapper = fcpxml_reader.fcpxml_wrapper(current[0])
-            self.assertEqual(len(wrapper.clips), current[1])
+            self.assertEqual(wrapper.clip_count, current[1])
 
 
 class framerate_logic(unittest.TestCase):

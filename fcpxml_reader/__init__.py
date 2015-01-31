@@ -70,6 +70,7 @@ def timevalue_to_seconds(duration_str):
 class fcpxml_wrapper(object):
     def __init__(self, filename=None):
         self.framerate = 0
+        self.clip_count = None
         self.clips = []
         self.speeds = []
 
@@ -91,6 +92,7 @@ class fcpxml_wrapper(object):
         self.framerate = timevalue_to_seconds(mformat.get('frameDuration'))
 
         if clips:
+            self.clip_count = len(clips)
             for current_clip in clips:
                 clip_found = clip_wrapper()
                 clip_found.name = current_clip.get('name')
