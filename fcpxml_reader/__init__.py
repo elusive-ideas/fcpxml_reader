@@ -70,7 +70,6 @@ def timevalue_to_seconds(duration_str):
 class fcpxml_wrapper(object):
     def __init__(self, filename=None):
         self.framerate = 0
-        self.clip_name = None
         self.clips = []
         self.speeds = []
 
@@ -86,7 +85,7 @@ class fcpxml_wrapper(object):
         mformat = resources.find('format')
         sequence = project.find('sequence')
         spine = sequence.find('spine')
-        clips = spine.findall('ref-clip') or spine.findall('clip')
+        clips = spine.findall('ref-clip') or spine.findall('clip') or spine.findall('video')
 
         # Get the framerate
         self.framerate = timevalue_to_seconds(mformat.get('frameDuration'))
@@ -109,18 +108,15 @@ class fcpxml_wrapper(object):
                                     percentage = (chunk*100)/time
 
                     clip_found.percentage = int(round(percentage))
+
                 else:
                     clip_found.percentage = 100
-                    
+                
                 # Get clip start and end frame
                 pass
 
+                # Add current clip to the clip list
                 self.clips.append(clip_found)
-
-        else:
-            #clip_found = clip_wrapper()
-            #self.clips.append(clip_found)
-            pass
 
 
 class clip_wrapper(object):
