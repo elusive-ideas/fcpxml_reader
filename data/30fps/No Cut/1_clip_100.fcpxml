@@ -9,7 +9,7 @@
         </resources>
         <sequence duration="30100/3000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
             <spine>
-                <video offset="0s" ref="r2" name="Timecode" duration="30100/3000s" start="3600s"/>
+                <video offset="0s" ref="r2" name="name-1_clip_100" duration="30100/3000s" start="3600s"/>
             </spine>
         </sequence>
     </project>
