@@ -86,7 +86,8 @@ class fcpxml_wrapper(object):
         mformat = resources.find('format')
         sequence = project.find('sequence')
         spine = sequence.find('spine')
-        clips = spine.findall('ref-clip') or spine.findall('clip') or spine.findall('video')
+        clips = (spine.findall('ref-clip') or spine.findall('clip') or
+                 spine.findall('video'))
 
         # Get the framerate
         self.framerate = timevalue_to_seconds(mformat.get('frameDuration'))
@@ -113,7 +114,7 @@ class fcpxml_wrapper(object):
 
                 else:
                     clip_found.percentage = 100
-                
+
                 # Get clip start and end frame
                 pass
 
