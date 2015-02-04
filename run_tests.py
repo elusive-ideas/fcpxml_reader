@@ -43,6 +43,13 @@ class seconds_to_frames_logic(unittest.TestCase):
         self.assertEqual(frames, 100)
 
 
+class clip_cuts_logic(unittest.TestCase):
+    def test_clip_cuts_logic(self):
+        self.data_fldr = os.getcwd() + r'\data'
+
+        pass
+
+
 class clip_percentage_logic(unittest.TestCase):
     def test_clip_percentage_logic(self):
         self.data_fldr = os.getcwd() + r'\data'

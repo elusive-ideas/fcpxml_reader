@@ -92,6 +92,7 @@ class fcpxml_wrapper(object):
         # Get the framerate
         self.framerate = timevalue_to_seconds(mformat.get('frameDuration'))
 
+        print "About to check clips for '{0}'".format(filename)
         if clips:
             self.clip_count = len(clips)
             for current_clip in clips:
@@ -115,8 +116,26 @@ class fcpxml_wrapper(object):
                 else:
                     clip_found.percentage = 100
 
-                # Get clip start and end frame
-                pass
+                # -------------------------------------------------------------
+                # -------------------------------------------------------------
+                # -------------------------------------------------------------
+                start = None
+                if len(clips) == 1:
+                    start = 1
+                    print start
+                else:
+                    start = current_clip.get('start')
+                    if not start:
+                        start = 1
+                        print start
+                    else:
+                        start_sec = get_duration(start)
+                        sec_per = ((start_sec*clip_found.percentage)/100)
+                        clip_found.start_frame = int(sec_per*self.framerate)
+                        print clip_found.start_frame
+                # -------------------------------------------------------------
+                # -------------------------------------------------------------
+                # -------------------------------------------------------------
 
                 # Add current clip to the clip list
                 self.clips.append(clip_found)
