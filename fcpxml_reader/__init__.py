@@ -121,18 +121,25 @@ class fcpxml_wrapper(object):
                 # -------------------------------------------------------------
                 start = None
                 if len(clips) == 1:
-                    start = 1
-                    print start
+                    start = "1"
+                    print "  START", start
                 else:
                     start = current_clip.get('start')
                     if not start:
-                        start = 1
-                        print start
+                        start = "1"
+                        print "  START", start
                     else:
                         start_sec = get_duration(start)
                         sec_per = ((start_sec*clip_found.percentage)/100)
                         clip_found.start_frame = int(sec_per*self.framerate)
-                        print clip_found.start_frame
+                        print "  START", clip_found.start_frame
+
+                duration = current_clip.get('duration')
+                full_duration = (get_duration(start) + get_duration(duration))
+                full_duration_per = ((full_duration*clip_found.percentage)/100)
+                clip_found.end_frame = int(full_duration_per*self.framerate)
+                print "  END", clip_found.end_frame
+
                 # -------------------------------------------------------------
                 # -------------------------------------------------------------
                 # -------------------------------------------------------------
